@@ -1,0 +1,215 @@
+/* Font and color styles */
+body {
+  font-family: Arial, sans-serif;
+  color: #292323;
+}
+
+h1 {
+  font-size: 76px; /* Reduce font size to 95% (95% of 80px) */
+  color: #b8141c;
+  margin-top: 95px; /* Reduce margin-top to 95% (95% of 100px) */
+}
+h100 {
+  font-size: 30px; /* Reduce font size to 95% (95% of 80px) */
+  color: #b8141c;
+  margin-top: 95px; /* Reduce margin-top to 95% (95% of 100px) */
+}
+h101 {
+  font-size: 30px; /* Reduce font size to 95% (95% of 80px) */
+  color: #028113;
+  margin-top: 95px; /* Reduce margin-top to 95% (95% of 100px) */
+}
+
+h3 {
+  font-size: 22.8px; /* Reduce font size to 95% (95% of 24px) */
+}
+
+h4 {
+  font-size: 17.1px; /* Reduce font size to 95% (95% of 18px) */
+}
+
+/* Container styles */
+
+ .centerElement{
+  text-align: center;
+}
+
+/* Panel styles */
+.panel {
+  margin-top: 25.65px; /* Reduce margin-top to 95% (95% of 27px) */
+}
+
+.panel-body {
+  padding-top: 57px; /* Reduce padding-top to 95% (95% of 60px) */
+
+}
+
+/* Text on panel */
+.text-on-pannel {
+  background: #fff;
+  border: 0.95px solid darkred; /* Reduce border to 95% (95% of 1px) */
+  border-radius: 7.6px; /* Reduce border-radius to 95% (95% of 8px) */
+  margin-left: 50px; /* Reduce margin-left to 95% (95% of 20px) */
+  margin-top: -44.65px; /* Reduce margin-top to 95% (95% of 47px) */
+  padding: 2.85px 4.75px; /* Reduce padding to 95% (95% of 3px and 5px) */
+  position: absolute;
+}
+
+.text-on-pannel h3 {
+  color: #b73333;
+}
+
+/* Form control styles */
+.form-control1 {
+  display: block;
+  width: 57%; /* Reduce width to 95% (95% of 60%) */
+  height: 32.3px; /* Reduce height to 95% (95% of 34px) */
+  padding: 5.7px 11.4px; /* Reduce padding to 95% (95% of 6px and 12px) */
+  font-size: 13.3px; /* Reduce font size to 95% (95% of 14px) */
+  line-height: 1.42857143;
+  color: #555;
+  background-color: #fff;
+  background-image: none;
+  border: 0.95px solid #ccc; /* Reduce border to 95% (95% of 1px) */
+  border-radius: 3.8px; /* Reduce border-radius to 95% (95% of 4px) */
+  -webkit-box-shadow: inset 0 0.95px 0.95px rgba(0,0,0,.075); /* Reduce box-shadow to 95% (95% of 1px) */
+  box-shadow: inset 0 0.95px 0.95px rgba(0,0,0,.075); /* Reduce box-shadow to 95% (95% of 1px) */
+  -webkit-transition: border-color ease-in-out .1425s,box-shadow ease-in-out .1425s; /* Reduce transition duration to 95% (95% of original duration) */
+  -o-transition: border-color ease-in-out .1425s,box-shadow ease-in-out .1425s; /* Reduce transition duration to 95% (95% of original duration) */
+  -webkit-transition: border-color ease-in-out .1425s,-webkit-box-shadow ease-in-out .1425s; /* Reduce transition duration to 95% (95% of original duration) */
+  transition: border-color ease-in-out .1425s,-webkit-box-shadow ease-in-out .1425s; /* Reduce transition duration to 95% (95% of original duration) */
+  transition: border-color ease-in-out .1425s,box-shadow ease-in-out .1425s; /* Reduce transition duration to 95% (95% of original duration) */
+  transition: border-color ease-in-out .1425s,box-shadow ease-in-out .1425s,-webkit-box-shadow ease-in-out .1425s; /* Reduce transition duration to 95% (95% of original duration) */
+  margin-left: 50px; /* Reduce margin-left to 95% (95% of 20px) */
+}
+
+.form-control2 {
+  display: block;
+  width: 57%;
+  height: auto; /* Remove fixed height */
+  padding: 5.7px 11.4px;
+  font-size: 13.3px;
+  line-height: 1.42857143;
+  color: #555;
+  background-color: #fff;
+  background-image: none;
+  border: 0.95px solid #ccc;
+  border-radius: 3.8px;
+  -webkit-box-shadow: inset 0 0.95px 0.95px rgba(0, 0, 0, 0.075);
+  box-shadow: inset 0 0.95px 0.95px rgba(0, 0, 0, 0.075);
+  -webkit-transition: border-color ease-in-out 0.1425s, box-shadow ease-in-out 0.1425s;
+  -o-transition: border-color ease-in-out 0.1425s, box-shadow ease-in-out 0.1425s;
+  -webkit-transition: border-color ease-in-out 0.1425s, -webkit-box-shadow ease-in-out 0.1425s;
+  transition: border-color ease-in-out 0.1425s, -webkit-box-shadow ease-in-out 0.1425s;
+  transition: border-color ease-in-out 0.1425s, box-shadow ease-in-out 0.1425s;
+  transition: border-color ease-in-out 0.1425s, box-shadow ease-in-out 0.1425s, -webkit-box-shadow ease-in-out 0.1425s;
+  margin-left: 50px;
+}
+
+
+.form-control1:focus {
+  border-color: #66afe9;
+  outline: 0;
+  -webkit-box-shadow: inset 0 0.95px 0.95px rgba(0,0,0,.075), 0 0 7.6px rgba(102,175,233,.57); /* Reduce box-shadow to 95% (95% of original values) */
+  box-shadow: inset 0 0.95px 0.95px rgba(0,0,0,.075), 0 0 7.6px rgba(102,175,233,.57); /* Reduce box-shadow to 95% (95% of original values) */
+}
+
+/* Radio button styles */
+.form-check {
+  padding-top: 9.5px; /* Reduce padding-top to 95% (95% of 10px) */
+  margin-left: 100px;
+}
+
+/* Language select styles */
+.form-group select {
+  width: 95%; /* Reduce width to 95% (95% of 100%) */
+  padding: 5.7px 11.4px; /* Reduce padding to 95% (95% of 6px and 12px) */
+  font-size: 13.3px; /* Reduce font size to 95% (95% of 14px) */
+  line-height: 1.42857143;
+  color: #555;
+  background-color: #fff;
+  background-image: none;
+  border: 0.95px solid #ccc; /* Reduce border to 95% (95% of 1px) */
+  border-radius: 3.8px; /* Reduce border-radius to 95% (95% of 4px) */
+  -webkit-box-shadow: inset 0 0.95px 0.95px rgba(0,0,0,.075); /* Reduce box-shadow to 95% (95% of 1px) */
+  box-shadow: inset 0 0.95px 0.95px rgba(0,0,0,.075); /* Reduce box-shadow to 95% (95% of 1px) */
+  -webkit-transition: border-color ease-in-out .1425s,box-shadow ease-in-out .1425s; /* Reduce transition duration to 95% (95% of original duration) */
+  -o-transition: border-color ease-in-out .1425s,box-shadow ease-in-out .1425s; /* Reduce transition duration to 95% (95% of original duration) */
+  -webkit-transition: border-color ease-in-out .1425s,-webkit-box-shadow ease-in-out .1425s; /* Reduce transition duration to 95% (95% of original duration) */
+  transition: border-color ease-in-out .1425s,-webkit-box-shadow ease-in-out .1425s; /* Reduce transition duration to 95% (95% of original duration) */
+  transition: border-color ease-in-out .1425s,box-shadow ease-in-out .1425s; /* Reduce transition duration to 95% (95% of original duration) */
+  transition: border-color ease-in-out .1425s,box-shadow ease-in-out .1425s,-webkit-box-shadow ease-in-out .1425s; /* Reduce transition duration to 95% (95% of original duration) */
+}
+
+.form-group1 select{
+  width: 50%; /* Reduce width to 95% (95% of 100%) */
+  padding: 5.7px 11.4px; /* Reduce padding to 95% (95% of 6px and 12px) */
+  font-size: 13.3px; /* Reduce font size to 95% (95% of 14px) */
+  line-height: 1.42857143;
+  color: #555;
+  background-color: #fff;
+  background-image: none;
+  border: 0.95px solid #ccc; /* Reduce border to 95% (95% of 1px) */
+  border-radius: 3.8px; /* Reduce border-radius to 95% (95% of 4px) */
+  -webkit-box-shadow: inset 0 0.95px 0.95px rgba(0,0,0,.075); /* Reduce box-shadow to 95% (95% of 1px) */
+  box-shadow: inset 0 0.95px 0.95px rgba(0,0,0,.075); /* Reduce box-shadow to 95% (95% of 1px) */
+  -webkit-transition: border-color ease-in-out .1425s,box-shadow ease-in-out .1425s; /* Reduce transition duration to 95% (95% of original duration) */
+  -o-transition: border-color ease-in-out .1425s,box-shadow ease-in-out .1425s; /* Reduce transition duration to 95% (95% of original duration) */
+  -webkit-transition: border-color ease-in-out .1425s,-webkit-box-shadow ease-in-out .1425s; /* Reduce transition duration to 95% (95% of original duration) */
+  transition: border-color ease-in-out .1425s,-webkit-box-shadow ease-in-out .1425s; /* Reduce transition duration to 95% (95% of original duration) */
+  transition: border-color ease-in-out .1425s,box-shadow ease-in-out .1425s; /* Reduce transition duration to 95% (95% of original duration) */
+  transition: border-color ease-in-out .1425s,box-shadow ease-in-out .1425s,-webkit-box-shadow ease-in-out .1425s; /* Reduce transition duration to 95% (95% of original duration) */
+}
+
+
+/* Submit button styles */
+.btn-primary {
+  background-color: #b73333;
+  border-color: #b73333;
+  color: #fff;
+  padding: 9.5px 19px; /* Reduce padding to 95% (95% of 10px and 20px) */
+  font-size: 17.1px; /* Reduce font size to 95% (95% of 18px) */
+  border-radius: 3.8px; /* Reduce border-radius to 95% (95% of 4px) */
+  cursor: pointer;
+}
+
+.btn-primary:hover {
+  background-color: #8a2828;
+  border-color: #8a2828;
+}
+.btn-center{
+  text-align: center;
+  margin-bottom: 50px;
+}
+.text-center h1 {
+  color: #b8141c;
+  font-size: 76px; /* Reduce font size to 95% (95% of 80px) */
+}
+.footer {
+  margin-top: 20px;
+  padding: 10px;
+  background-color: #212224;
+  text-align: center;
+  font-size: 14px;
+  color: #f8f9fa;
+}
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.footer-text {
+  margin: 0;
+}
+
+.social-media {
+  display: flex;
+}
+
+.social-link {
+  margin-right: 10px;
+  color: #333;
+  font-size: 18px;
+}

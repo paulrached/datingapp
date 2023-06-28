@@ -1,0 +1,146 @@
+<!-- index.ejs -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Chat</title>
+    
+     <style>
+      body {
+        margin: 0;
+        padding-bottom: 3rem;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      }
+
+      #form {
+        background: rgba(0, 0, 0, 0.15);
+        padding: 0.25rem;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        display: flex;
+        height: 3rem;
+        box-sizing: border-box;
+        backdrop-filter: blur(10px);
+      }
+
+      #input {
+        border: none;
+        padding: 0 1rem;
+        flex-grow: 1;
+        border-radius: 2rem;
+        margin: 0.25rem;
+      }
+
+      #input:focus {
+        outline: none;
+      }
+
+      #form > button {
+        background: rgb(232, 248, 4);
+        border: none;
+        cursor: pointer;
+        padding: 0 1rem;
+        margin: 0.25rem;
+        border-radius: 3px;
+        outline: none;
+        color: rgb(0, 0, 0);
+      }
+
+      #messages {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+      }
+
+      #messages > li {
+        padding: 0.5rem 1rem;
+      }
+
+      #messages > li:nth-child(odd) {
+        background: #efefef;
+      }
+    </style>
+    
+  </head>
+  <body>
+    <div>
+      <script>
+        document.addEventListener('DOMContentLoaded', function() {
+          // Get the current URL
+          var currentURL = window.location.href;
+      
+          // Parse the URL and extract the value
+          var url = new URL(currentURL);
+          var valueFromURL = url.searchParams.get('currentUser');
+      
+          // Set the value to the hidden input field
+          document.getElementById('XX').value = valueFromURL;
+          
+          // Update the href of the link with the value of XX
+          var link = document.getElementById('profileLink');
+          var href = link.getAttribute('href');
+          link.setAttribute('href', href + valueFromURL);
+        });
+      </script>
+      
+      <a href="http://localhost:5173/Chat">
+        <button type="button">Go back</button>
+      </a>
+    </div>
+  
+    <div>
+      <ul id="messages"></ul>
+      <form id="form" action="">
+        <input id="input" autocomplete="off" />
+        
+        <button>Send Message</button>
+      </form>
+      <script src="/socket.io/socket.io.js"></script>
+      <script>
+        var socket = io();
+        var messages = document.getElementById('messages');
+        var form = document.getElementById('form');
+        var input = document.getElementById('input');
+        var currentUser = '<%= currentUser %>';
+        var otherUser = '<%= otherUser %>';
+  
+        // Join the chat room and fetch previous messages
+        socket.emit('join chat', { currentUser: currentUser, otherUser: otherUser });
+  
+        form.addEventListener('submit', function(e) {
+          e.preventDefault();
+          if (input.value) {
+            var data = {
+              currentUser: currentUser,
+              otherUser: otherUser,
+              message: input.value
+            };
+            socket.emit('chat message', data);
+            input.value = '';
+          }
+        });
+  
+        socket.on('previous messages', function(msgs) {
+          msgs.forEach(function(msg) {
+            displayMessage(msg);
+          });
+          window.scrollTo(0, document.body.scrollHeight);
+        });
+  
+        socket.on('chat message', function(msg) {
+          displayMessage(msg);
+          window.scrollTo(0, document.body.scrollHeight);
+        });
+  
+        function displayMessage(msg) {
+          var item = document.createElement('li');
+          var sender = msg.sender;
+          item.textContent = sender + ': ' + msg.message;
+          messages.appendChild(item);
+        }
+      </script>
+    </div>
+  </body>
+ 
+</html>
